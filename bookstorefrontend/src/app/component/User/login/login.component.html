@@ -1,0 +1,33 @@
+<div class="login-container">
+  <form [formGroup]="loginForm" (submit)="onSubmit()">
+    <div class="row login-email">
+      <label>email</label>
+      <input
+        type="text"
+        name="email"
+        class="inputbox login-email--inputbox"
+        formControlName="email"
+      />
+    </div>
+    <div class="row login-password">
+      <label>password</label>
+      <input
+        type="text"
+        name="password"
+        class="inputbox login-password--inputbox"
+        formControlName="password"
+      />
+      <div class="forgotpassword">forgot password?</div>
+    </div>
+    <div class="row login-button">
+      <button class="btn login-button--button">login</button>
+    </div>
+    <div class="row login-or">
+      <hr class="hr-text" data-content="OR" />
+    </div>
+    <div class="login-website row">
+      <button class="btn login-website--link btn-google">Google</button>
+      <button class="btn login-website--link btn-facebook">Facebook</button>
+    </div>
+  </form>
+</div>

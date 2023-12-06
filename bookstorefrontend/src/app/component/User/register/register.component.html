@@ -1,0 +1,43 @@
+<div class="register-container">
+  <form [formGroup]="registerForm" (submit)="onSubmit()">
+    <div class="row">
+      <label for="fullName">full name</label>
+      <input
+        type="text"
+        name="fullName"
+        class="inputbox"
+        formControlName="fullName"
+      />
+    </div>
+    <div class="row">
+      <label for="EmailId">Email Id</label>
+      <input
+        type="text"
+        name="EmailId"
+        class="inputbox"
+        formControlName="email"
+      />
+    </div>
+    <div class="row">
+      <label for="password">password</label>
+      <input
+        type="text"
+        name="password"
+        class="inputbox"
+        formControlName="password"
+      />
+    </div>
+    <div class="row">
+      <label for="MobileNumber">Mobile Number</label>
+      <input
+        type="text"
+        name="MobileNumber"
+        class="inputbox"
+        formControlName="mobileNumber"
+      />
+    </div>
+    <div class="row">
+      <button class="btn register-button">login</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,34 @@
+<div class="reset-container">
+  <div class="reset-container-sub">
+    <div class="title">Reset Your Password</div>
+    <div class="test">
+      <div class="content">
+        <form [formGroup]="resetform" (submit)="onSubmit()">
+          <div class="content-sub">Enter your new password</div>
+          <div class="row login-password">
+            <label for="password" class="label">password</label>
+            <input
+              type="text"
+              name="password"
+              class="inputbox login-password--inputbox"
+              formControlName="password"
+            />
+          </div>
+          <div class="row login-confirm-password">
+            <label for="confirm-password" class="label">confirm password</label>
+            <input
+              type="text"
+              name="confirm-password"
+              class="inputbox login-confirm-password--inputbox"
+              formControlName="confirmpassword"
+            />
+          </div>
+          <div class="row">
+            <button class="btn">Reset Password</button>
+          </div>
+        </form>
+      </div>
+      <!-- <div class="create-account">create-account</div> -->
+    </div>
+  </div>
+</div>

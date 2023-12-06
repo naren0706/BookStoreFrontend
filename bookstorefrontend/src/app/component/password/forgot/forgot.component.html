@@ -1,0 +1,28 @@
+<div class="forgot-container">
+  <div class="forgot-container-sub">
+    <form [formGroup]="Forgotform" (submit)="onSubmit()">
+      <div class="title">Forgot Your Password</div>
+      <div class="test">
+        <div class="content">
+          <div class="content-sub">
+            Enter your email address and we'll send you a link to reset your
+            password.
+          </div>
+          <div class="row login-email">
+            <label for="email" class="label">email</label>
+            <input
+              type="text"
+              name="email"
+              class="inputbox login-email--inputbox"
+              formControlName="email"
+            />
+          </div>
+          <div class="row">
+            <button class="btn">Reset Password</button>
+          </div>
+        </div>
+        <div class="create-account">create-account</div>
+      </div>
+    </form>
+  </div>
+</div>

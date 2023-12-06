@@ -1,0 +1,24 @@
+
+$medium: 768px;
+$small: 576px;
+$default-font-size: 1.6rem;
+$color-primary: #55c57a;
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+
+  // @media (max-width: $medium) {
+  //   font-size: 56.25%; // 1rem = 9px
+  // }
+
+  // @media (max-width: $small) {
+  //   font-size: 50%; // 1rem = 8px
+  // }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
