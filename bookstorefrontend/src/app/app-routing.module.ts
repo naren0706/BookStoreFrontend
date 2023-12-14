@@ -8,12 +8,8 @@ import { ForgotComponent } from './component/password/forgot/forgot.component';
 import { ResetComponent } from './component/password/reset/reset.component';
 import { DashboardComponent } from './component/books/dashboard/dashboard.component';
 import { GetAllBooksComponent } from './component/books/get-all-books/get-all-books.component';
-import { BookComponent } from './component/books/book/book.component';
 import { BookDetailsComponent } from './component/books/book-details/book-details.component';
 import { CartComponent } from './component/Cart/cart/cart.component';
-import { CartBooksComponent } from './component/Cart/cart-books/cart-books.component';
-import { NewAddressComponent } from './component/Cart/new-address/new-address.component';
-import { TestComponent } from './component/test/test.component';
 import { WishlistComponent } from './component/wishlist/wishlist/wishlist.component';
 import { ProfileComponent } from './component/User/profile/profile.component';
 import { OrderPlacedComponent } from './component/order-placed/order-placed.component';
@@ -56,7 +52,6 @@ const routes: Routes = [
       { path: 'oldOrders', component: OldOrdersComponent },
     ],
   },
-  { path: 'test', component: TestComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
