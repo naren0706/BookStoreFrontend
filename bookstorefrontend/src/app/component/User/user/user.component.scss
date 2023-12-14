@@ -8,13 +8,13 @@ $maxwidth: 1200px;
   justify-content: center;
   &-sub {
     width: 40%;
-    height: 40rem;
+    height: 45rem;
     min-height: fit-content;
     display: grid;
     // justify-content: space-evenly;
     background-color: white;
     padding: 1.5rem 6.5rem;
-    border-radius: 30px;
+    border-radius: 10px;
     grid-template-columns: 40% 60%;
     @media only screen and (max-width: $maxwidth) {
       & {
@@ -45,6 +45,15 @@ $maxwidth: 1200px;
 }
 
 .content {
+  &:hover {
+    transform: scale(1.2);
+    background-color: #fff;
+    @media only screen and (max-width: $maxwidth) {
+      & {
+        background-color: transparent;
+      }
+    }
+  }
   &-sub {
     display: grid;
     grid-template-rows: 20% 80%;
@@ -65,10 +74,7 @@ $maxwidth: 1200px;
   // align-items: center;
   justify-content: center;
   height: 100%;
-  &:hover {
-    transform: scale(1.2);
-    background-color: white;
-  }
+
   &-buttons {
     display: flex;
     justify-content: space-evenly;
@@ -92,4 +98,17 @@ $maxwidth: 1200px;
 }
 .buttons-combain {
   display: flex;
+  position: relative;
+}
+.active-color {
+  &::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 5rem;
+    background-color: red;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
 }

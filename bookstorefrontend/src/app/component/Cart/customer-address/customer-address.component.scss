@@ -1,0 +1,68 @@
+.radio-btn {
+  display: flex;
+  gap: 10px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+
+.form {
+  &-container {
+    display: flex;
+    justify-content: center;
+    &-sub {
+      width: 80%;
+    }
+  }
+
+  &-title {
+  }
+  &-input {
+    &--inputtextarea {
+      width: 100%;
+      min-height: 5rem;
+    }
+    &--input {
+      width: 100%;
+      padding: 1rem 0.5rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+.row {
+  display: flex;
+}
+.col {
+  width: 100%;
+  margin: 10px;
+}
+.edit-btn {
+  background-color: transparent;
+  border: 0;
+  padding-left: 1rem;
+  outline: none;
+  color: #a03037;
+  transition: all 0.02s ease-in-out;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+.update {
+  display: flex;
+  justify-content: end;
+  right: 10px;
+  &-btn {
+    padding: 1rem;
+  }
+}
+.radio-btn-container{
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}

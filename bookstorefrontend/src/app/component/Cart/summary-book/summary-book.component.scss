@@ -1,0 +1,39 @@
+.summary-book-container {
+  margin: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.image {
+  &--image {
+    max-width: 10rem;
+  }
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+}
+.bookName {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.author {
+  color: #9d9d9d;
+}
+.price {
+  display: flex;
+  gap: 1rem;
+  @media only screen and (max-width: 450px) {
+    & {
+      flex-direction: column;
+    }
+  }
+  .cost {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .mrp {
+    color: #9d9d9d;
+  }
+}

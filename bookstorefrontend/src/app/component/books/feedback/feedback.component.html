@@ -1,0 +1,15 @@
+<div class="feedback-container">
+  <div class="name">
+    <div class="symbol">{{symbol}}</div>
+    <!-- {{naren}} -->
+    {{feedback.user.fullName}}
+  </div>
+  <div class="starrating">
+    <span *ngFor="let star of getStarsFromRating(feedback.rating); let i = index">
+      <i class="material-icons icon" style="color: gold;">{{ star ? "star" : "star_border" }}</i>
+    </span>
+  </div>
+  <div class="content">
+    {{feedback.customerDescription}}
+  </div>
+</div>

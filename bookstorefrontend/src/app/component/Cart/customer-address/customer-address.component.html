@@ -1,0 +1,89 @@
+<div class="radio-btn">
+  <input
+    type="radio"
+    id="{address.customerID}"
+    name="address"
+    value="{address.customerID}"
+    class="radio-btn--input"
+    (click)="emmitValue(address.customerID)"
+  />
+  <div class="label">
+    {{ address.fullName }}
+    <div class="edit">
+      <button class="edit-btn" (click)="IsEdit = !IsEdit">Edit</button>
+    </div>
+  </div>
+</div>
+<div class="customer-Details">
+  <form class="form-container">
+    <div class="form-container-sub">
+      <div class="row">
+        <div class="col">
+          <div class="form-title">Name</div>
+          <input
+            type="text"
+            class="form-input--input"
+            [value]="address.fullName"
+            [disabled]="!IsEdit"
+            (keyup)="SetName($event)"
+          />
+        </div>
+        <div class="col">
+          <div class="form-title">MobileNumber</div>
+          <input
+            type="text"
+            class="form-input--input"
+            [value]="address.mobileNum"
+            [disabled]="!IsEdit"
+            (keyup)="SetMobileNum($event)"
+            />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-title">Address</div>
+          <div class="form-input">
+            <textarea
+              matInput
+              class="form-input--inputtextarea"
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="auto"
+              cdkAutosizeMinColumns="auto"
+              cdkAutosizeMaxRows="auto"
+              [value]="address.address"
+              placeholder="feedback"
+              [disabled]="!IsEdit"
+              (keyup)="SetAddressValue($event)"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-title">City/Town</div>
+          <input
+            type="text"
+            class="form-input--input"
+            [value]="address.cityOrTown"
+            [disabled]="!IsEdit"
+            (keyup)="SetCityOrTownValue($event)"
+          />
+        </div>
+        <div class="col">
+          <div class="form-title">state</div>
+          <input
+            type="text"
+            class="form-input--input"
+            [value]="address.state"
+            [disabled]="!IsEdit"
+            (keyup)="SetStateValue($event)"
+          />
+        </div>
+      </div>
+      <div class="row update" *ngIf="IsEdit">
+        <button class="update-btn btn-blue" (click)="UpdateAddress()">Update</button>
+      </div>
+    </div>
+  </form>
+</div>

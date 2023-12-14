@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="heading">
+    {{ address.fullName }}
+    <span class="edit-btn btn-blue-inverse" (click)="IsEdit = !IsEdit">edit</span>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="{{ address.fullName }}">fullname</label><br />
+      <input
+        type="text"
+        class="input--textbox"
+        id="{{ address.fullName }}"
+        value="{{ address.fullName }}"
+        [disabled]="!IsEdit"
+        (keyup)="SetName($event)"
+      />
+    </div>
+    <div class="col">
+      <label for="{{ address.mobileNum }}">mobile number</label><br />
+      <input
+        type="text"
+        class="input--textbox"
+        id="{{ address.mobileNum }}"
+        value="{{ address.mobileNum }}"
+        [disabled]="!IsEdit"
+        (keyup)="SetMobileNum($event)"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="{{ address.address }}">address</label>
+      <textarea
+        matInput
+        class="input--inputtextarea"
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="auto"
+        cdkAutosizeMinColumns="auto"
+        cdkAutosizeMaxRows="auto"
+        placeholder="address"
+        id="{{ address.address }}"
+        value="{{ address.address }}"
+        [disabled]="!IsEdit"
+        (keyup)="SetAddressValue($event)"
+      ></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="{{ address.cityOrTown }}">city</label><br />
+      <input
+        type="text"
+        class="input--textbox"
+        id="{{ address.cityOrTown }}"
+        value="{{ address.cityOrTown }}"
+        [disabled]="!IsEdit"
+        (keyup)="SetCityOrTownValue($event)"
+      />
+    </div>
+    <div class="col">
+      <label for="{{ address.state }}">state</label><br />
+      <input
+        type="text"
+        class="input--textbox"
+        id="{{ address.state }}"
+        value="{{ address.state }}"
+        [disabled]="!IsEdit"
+        (keyup)="SetStateValue($event)"
+      />
+    </div>
+  </div>
+  <div class="row" *ngIf="IsEdit">
+    <div class="update-btn">
+      <button class="btn btn-red" (click)="UpdateAddress()">Update</button>
+    </div>
+  </div>
+</div>

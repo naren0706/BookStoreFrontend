@@ -1,0 +1,14 @@
+.oldorder {
+  &-container {
+    display: flex;
+    justify-content: center;
+    &-sub {
+      width: 80%;
+    }
+  }
+}
+.title{
+  padding: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}

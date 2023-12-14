@@ -1,0 +1,124 @@
+<div class="profile-container">
+  <div class="profile-container-sub">
+    <div class="form-container">
+      <div class="heading">
+        <div class="title">Personal Details</div>
+        <button class="btn edit-btn">Edit</button>
+      </div>
+      <div class="form">
+        <div class="row">
+          <div class="col">
+            <label for="name">Name</label><br />
+            <input type="text" class="input--textbox" id="name" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="email">email</label><br />
+            <input type="text" class="input--textbox" id="email" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="mobileNumber">mobile Number</label><br />
+            <input type="text" class="input--textbox" id="mobileNumber" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="new-address">
+              <div class="new-address-heading">
+                <div class="title">Address Details</div>
+                <div class="button">
+                  <button class="btn-1 btn-red-inverse" (click)="IsAddAddress = !IsAddAddress">
+                    Add Address
+                  </button>
+                </div>
+              </div>
+              <div class="new-address-form" *ngIf="IsAddAddress">
+                <div class="row">
+                  <div class="col">
+                    <label for="fullname">fullname</label><br />
+                    <input type="text" class="input--textbox" id="fullname" />
+                  </div>
+                  <div class="col">
+                    <label for="customer_mobilenumber">mobilenumber</label
+                    ><br />
+                    <input
+                      type="text"
+                      class="input--textbox"
+                      id="customer_mobilenumber"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <label for="">address</label>
+                    <textarea
+                      matInput
+                      class="input--inputtextarea"
+                      cdkTextareaAutosize
+                      #autosize="cdkTextareaAutosize"
+                      cdkAutosizeMinRows="auto"
+                      cdkAutosizeMinColumns="auto"
+                      cdkAutosizeMaxRows="auto"
+                      placeholder="address"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <label for="city">city</label><br />
+                    <input type="text" class="input--textbox" id="city" />
+                  </div>
+                  <div class="col">
+                    <label for="state">state</label><br />
+                    <input type="text" class="input--textbox" id="state" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    type
+                    <div class="radio">
+                      <div class="radio-grp">
+                        <input
+                          type="radio"
+                          id="home"
+                          name="fav_language"
+                          value="1"
+                        />
+                        <label for="home">home</label><br />
+                      </div>
+                      <div class="radio-grp">
+                        <input
+                          type="radio"
+                          id="work"
+                          name="fav_language"
+                          value="2"
+                        />
+                        <label for="work">work</label><br />
+                      </div>
+
+                      <div class="radio-grp">
+                        <input
+                          type="radio"
+                          id="other"
+                          name="fav_language"
+                          value="3"
+                        />
+                        <label for="other">other</label><br />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="address-container" *ngFor="let addres of address">
+              <app-user-addresses [address]="addres" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

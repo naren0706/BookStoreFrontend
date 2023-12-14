@@ -13,7 +13,8 @@ export class LoginComponent implements OnInit {
   inputform: any;
   constructor(
     private formBuilder: FormBuilder,
-    private userService: UserserviceService
+    private userService: UserserviceService,
+    private router: Router, 
   ) {}
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -29,7 +30,7 @@ export class LoginComponent implements OnInit {
     this.userService.loginService(url).subscribe((res: any) => {
       console.log(res);
       localStorage.setItem('token', res.data);
-      // this.router.navigateByUrl('/dashboard/newnotes');
+      this.router.navigateByUrl('/dashboard/books');
     });
   }
 }

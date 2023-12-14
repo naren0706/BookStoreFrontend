@@ -1,0 +1,33 @@
+<div class="book-container">
+  <header class="header">
+    <div class="header-sub">
+      <div class="title">
+        <div class="title-sub">
+          <h1>Books</h1>
+          <!-- <div class="count">({{ bookArray.length }})</div> -->
+        </div>
+      </div>
+      <div class="sort">
+        <select id="sort" name="dropbtn" class="sort--dropdwn">
+          <option value="a">sort by relevent</option>
+          <option value="b">prize : low to high</option>
+          <option value="c">prize : high to low</option>
+          <option value="d">ratings : high to low</option>
+          <option value="e">ratings : low to high</option>
+        </select>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="content-container">
+      <div class="content-container-sub">
+        <div
+          class="notes"
+          *ngFor="let note of bookArray | searchbar : filterstring"
+        >
+          <app-book [book]="note" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

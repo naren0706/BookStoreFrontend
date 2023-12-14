@@ -1,0 +1,90 @@
+.cart-book {
+  &-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    @media only screen and (max-width: 1100px) {
+      & {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  &-image {
+    &--image {
+      height: 150px;
+      background-color: pink;
+    }
+  }
+  &-details {
+    & > * {
+      padding: 0.3rem;
+    }
+    .bookName {
+      font-size: 2rem;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    .author {
+      font-size: 1.6rem;
+      font-weight: 500;
+      text-transform: capitalize;
+      color: #9d9d9d;
+    }
+    .prices {
+      display: flex;
+      align-items: flex-end;
+      gap: 1rem;
+      font-weight: 500;
+      height: fit-content;
+      .rate {
+        font-size: 2rem;
+      }
+      .mrp {
+        font-size: 1.3rem;
+        color: #9d9d9d;
+      }
+    }
+    .cart {
+      &-functions {
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 20%;
+      }
+      &-update {
+        &-container {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+        }
+        &--decrement {
+        }
+        &--increment {
+        }
+        &--btn {
+          height: 3rem;
+          width: 3rem;
+          border-radius: 100rem;
+          border: 1px solid #dbdbdb;
+          outline: 0;
+        }
+        &--inputbox {
+          width: 2rem;
+          padding: 0.5rem;
+        }
+        &-remove {
+          &--remove {
+            padding: 1rem;
+            border: 1px solid #dbdbdb;
+            background-color: transparent;
+            border: none;
+            transition: all 0.2s ease-in-out;
+            &:hover {
+              border: 1px solid black;
+              background-color: #9d9d9d;
+            }
+          }
+        }
+      }
+    }
+  }
+}

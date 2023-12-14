@@ -1,0 +1,92 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<div class="bookDetail-container">
+  <div class="image">
+    <div class="image-sub">
+      <img src="{{ book.bookImage }}" class="image-sub--img" alt="" />
+      <div class="image-buttons">
+        <button class="btn btn-red" (click)="AddToCart()">
+          <span mat-icon class="material-symbols-outlined menu--icon">
+            shopping_cart </span
+          >Add to cart
+        </button>
+        <button class="btn btn-grey" (click)="addToWishList()">
+          <span mat-icon class="material-symbols-outlined menu--icon">
+            Favorite
+          </span>
+          wishlist
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="description">
+    <div class="description-sub">
+      <div class="bookName">{{ book.bookName }}</div>
+      <div class="author">By {{ book.Author }}</div>
+      <div class="ratings">
+        <div class="rating">{{ book.rating }} &#9733;</div>
+        <div class="rating-count">({{ book.bookCount }})</div>
+      </div>
+      <div class="prize">
+        <div class="cost">Rs.{{ book.bookPrize }}</div>
+        <div class="mrp">
+          <s> Rs.{{ book.bookPrize + 500 }} </s>
+        </div>
+      </div>
+      <div class="ray">
+        <hr />
+      </div>
+      <div class="details">
+        <div class="details-title">&#x2022; Book Details</div>
+        <div class="details-content">
+          {{ book.bookDescription }}
+        </div>
+        <div class="ray">
+          <hr />
+        </div>
+        <div class="feedback-container">
+          <div class="feedback-tittle">Customer feedback</div>
+          <div class="feedback-new">
+            <div class="feedback-new-star">
+              <span
+                *ngFor="let star of stars; let i = index"
+                (click)="rateBook(i + 1)"
+              >
+                <i class="material-icons icon" style="color: gold">{{
+                  star ? "star" : "star_border"
+                }}</i>
+              </span>
+            </div>
+            <div class="feedback-new-input">
+              <textarea
+                matInput
+                class="feedback-inputs--input"
+                cdkTextareaAutosize
+                #autosize="cdkTextareaAutosize"
+                cdkAutosizeMinRows="auto"
+                cdkAutosizeMinColumns="auto"
+                cdkAutosizeMaxRows="auto"
+                placeholder="feedback"
+                [(ngModel)]="feedback"
+              ></textarea>
+            </div>
+            <div class="feedback-new-button">
+              <button
+                class="feedback-new-button--button"
+                (click)="submit()"
+                [disabled]="feedback == null || !stars.includes(true)"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+          <div class="feedback-all" *ngFor="let feedback of feedbackArray">
+            <app-feedback [feedback]="feedback" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

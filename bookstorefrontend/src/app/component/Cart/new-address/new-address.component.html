@@ -1,0 +1,98 @@
+<div class="newAddress-container">
+  <form [formGroup]="newAddressForm" class="form">
+    <div class="row">
+      <div class="col">
+        <label for="FullName">FullName</label>
+
+        <input
+          type="text"
+          name="FullName"
+          class="inputbox"
+          formControlName="fullName"
+        />
+      </div>
+      <div class="col">
+        <label for="MobileNumber">Mobile Number</label>
+        <input
+          type="text"
+          name="MobileNumber"
+          class="inputbox"
+          formControlName="mobileNum"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label>Address</label>
+        <textarea
+          matInput
+          class="inputbox newAddress--input"
+          cdkTextareaAutosize
+          #autosize="cdkTextareaAutosize"
+          cdkAutosizeMinRows="auto"
+          cdkAutosizeMinColumns="auto"
+          cdkAutosizeMaxRows="auto"
+          placeholder="feedback"
+          formControlName="address"
+        ></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="cityOrTown">city Or Town</label>
+        <input
+          type="text"
+          name="cityOrTown"
+          class="inputbox"
+          formControlName="cityOrTown"
+        />
+      </div>
+      <div class="col">
+        <label for="state">state</label>
+        <input
+          type="text"
+          name="state"
+          class="inputbox"
+          formControlName="state"
+        />
+      </div>
+    </div>
+    <div class="row radio">
+      <div class="radio-btn">
+        <input
+          type="radio"
+          id="home"
+          name="type"
+          value="1"
+          formControlName="typeId"
+        />
+        <label for="home">home</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          type="radio"
+          id="work"
+          name="type"
+          value="2"
+          formControlName="typeId"
+        />
+        <label for="work">work</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          type="radio"
+          id="other"
+          name="type"
+          value="3"
+          formControlName="typeId"
+        />
+        <label for="other">other</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col button">
+        <button class="AddAddress" (click)="addAddress()">Add Address</button>
+      </div>
+    </div>
+  </form>
+</div>

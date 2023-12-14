@@ -1,0 +1,34 @@
+<div class="book-container" (click)="bookClick()">
+  <div class="nobook" *ngIf="!book.isAvailable">
+    <div class="nobook-sub">
+      Out Of Stock
+    </div>
+  </div>
+  <div class="book-container-sub">
+    <div class="book-image">
+      <img
+        src="{{ book.bookImage }}"
+        alt=""
+        srcset=""
+        class="book-image--image"
+      />
+    </div>
+    <div class="book-details">
+      <div class="name">{{ book.bookName }}</div>
+      <div class="author">{{ book.bookAuthor }}</div>
+      <div class="ratings">
+        <div class="rating">{{ book.rating }}
+          <!-- &#9734; -->
+          &#9733;
+          </div>
+        <div class="rating-count">({{ book.bookCount }})</div>
+      </div>
+      <div class="prize">
+        <div class="cost">Rs.{{ book.bookPrize }}</div>
+        <div class="mrp">
+          <s> Rs.{{ book.bookPrize + 500 }} </s>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

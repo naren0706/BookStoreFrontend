@@ -1,0 +1,27 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<div class="wishlist-book-container">
+  <div class="image">
+    <img src="{{ book.book.bookImage }}" class="image--image" />
+  </div>
+  <div class="contents">
+    <div class="bookName">{{ book.book.bookName }}</div>
+    <div class="author">{{ book.book.bookAuthor }}</div>
+    <div class="price">
+      <div class="cost">Rs.{{ book.book.bookPrize }}</div>
+      <div class="mrp">
+        <s> Rs. {{ book.book.bookPrize + 500 }} </s>
+      </div>
+    </div>
+  </div>
+  <div class="button">
+    <button mat-icon-button class="material-symbols-outlined icon" (click)="RemoveBook()">
+      delete
+    </button>
+    <button mat-icon-button class="material-symbols-outlined icon" (click)="AddBookCart()">
+      shopping_cart
+    </button>
+  </div>
+</div>

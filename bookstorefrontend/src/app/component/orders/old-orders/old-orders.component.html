@@ -1,0 +1,11 @@
+<div class="oldorder-container">
+  <div class="oldorder-container-sub">
+    <div class="oldbook-Container">
+      <div class="title">Order Placed</div>
+      <div class="book" *ngFor="let index of carts">
+        <!-- {{index.cart.book}} -->
+        <app-old-order-books [book]="index.cart.book" />
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,8 +1,6 @@
-
 $medium: 768px;
 $small: 576px;
 $default-font-size: 1.6rem;
-$color-primary: #55c57a;
 
 html {
   font-size: 62.5%; // 1rem = 10px
@@ -20,5 +18,70 @@ html {
   padding: 0;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+input {
+  // border: 0;
+  outline: none;
+}
+
+.icon {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+}
+
+.btn-red {
+  background-color: #a03037;
+  color: #ffffff;
+  border: 0;
+  outline: 0;
+  text-transform: capitalize;
+  border-radius: 2px;
+  &-inverse {
+    background-color: #fff;
+    color: #a03037;
+    border: 1px solid #a03037;
+    outline: 0;
+    text-transform: capitalize;
+    border-radius: 2px;
+    transition: 0.2s all ease-out;
+    &:hover {
+      background-color: #a03037;
+      color: #ffffff;
+    }
+  }
+}
+.btn-grey {
+  background-color: #333333;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  text-transform: capitalize;
+  border-radius: 2px;
+}
+.btn-blue {
+  background-color: #3371b5;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  border-radius: 2px;
+  text-transform: capitalize;
+  &-inverse {
+    background-color: #fff;
+    color: #3371b5;
+    border: 0;
+    outline: 0;
+    border-radius: 2px;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,19 @@
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<div class="wishlist-book-container">
+  <div class="image">
+    <img src="{{ book.bookImage }}" class="image--image" />
+  </div>
+  <div class="contents">
+    <div class="bookName">{{ book.bookName }}</div>
+    <div class="author">{{ book.bookAuthor }}</div>
+    <div class="price">
+      <div class="cost">Rs.{{ book.bookPrize }}</div>
+      <div class="mrp">
+        <s> Rs. {{ book.bookPrize + 500 }} </s>
+      </div>
+    </div>
+  </div>
+</div>

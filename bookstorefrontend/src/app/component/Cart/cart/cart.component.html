@@ -1,0 +1,77 @@
+<div class="cart-container">
+  <div class="cart">
+    <mat-accordion>
+      <mat-expansion-panel [expanded]="true" #cartPanel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>My Cart</mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="cartbooks-container">
+          <div class="cart-book" *ngFor="let book of books">
+            <!-- hi -->
+            <app-cart-books [book]="book" />
+          </div>
+          <div class="placeorder">
+            <button class="btn btn-blue" (click)="switchPanel(addressPanel, cartPanel)">
+              placeorder
+            </button>
+          </div>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="address">
+    <mat-accordion>
+      <mat-expansion-panel #addressPanel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Address</mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="address-container">
+          <div class="address-heading">
+            <div class="title"><h1>Customer Details</h1></div>
+            <div class="button">
+              <button class="btn btn-red-inverse" (click)="toggle()">Add New Address</button>
+            </div>
+          </div>
+          <div class="newAddress" *ngIf="IsNewAddress">
+            <app-new-address />
+          </div>
+          <div class="all-address">
+            <div class="address">
+              <div class="address" *ngFor="let address of CustomerAddresses">
+                <app-customer-address
+                  [address]="address"
+                  (messageEvent)="receiveMessage($event)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="continue-button">
+          <button
+            class="btn btn-red continue-btn"
+            (click)="switchPanel(summaryPanel, addressPanel)"
+          >
+            Continue
+          </button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  <div class="summary">
+    <mat-accordion>
+      <mat-expansion-panel #summaryPanel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Summary</mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="summary-container">
+          <div class="summary" *ngFor="let book of books">
+            <app-summary-book [book]="book" />
+          </div>
+        </div>
+        <div class="placeorder-button ">
+          <button class="btn btn-blue" (click)="placeOrder()">Place Order</button>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

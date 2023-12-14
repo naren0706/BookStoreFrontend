@@ -1,0 +1,53 @@
+$wishlist-max-width: 45rem;
+.wishlist-book-container {
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  border: 1px solid #e4e4e4;
+  position: relative;
+  @media only screen and (max-width: $wishlist-max-width) {
+    & {
+      flex-direction: column;
+    }
+  }
+}
+.image {
+  &--image {
+    max-width: 10rem;
+  }
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+}
+.bookName {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.author {
+  color: #9d9d9d;
+}
+.price {
+  display: flex;
+  gap: 1rem;
+  .cost {
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+  .mrp {
+    color: #9d9d9d;
+  }
+}
+.button {
+  @media only screen and (min-width: $wishlist-max-width) {
+    & {
+      position: absolute;
+    }
+  }
+  right: 10%;
+  top: 20%;
+  display: flex;
+  gap: 2rem;
+}

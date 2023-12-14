@@ -1,0 +1,45 @@
+<div class="cart-book-container">
+  <div class="cart-book-image">
+    <img
+      src="{{ book.book.bookImage }}"
+      alt="image"
+      class="cart-book-image--image"
+    />
+  </div>
+  <div class="cart-book-details">
+    <div class="bookName">{{ book.book.bookName }}</div>
+    <div class="author">{{ book.book.bookAuthor }}</div>
+    <div class="prices">
+      <div class="rate">Rs.{{ book.book.bookPrize }}</div>
+      <div class="mrp">
+        <s>Rs.{{ book.book.bookPrize + 500 }}</s>
+      </div>
+    </div>
+    <div class="cart-functions">
+      <div class="cart-update-container">
+        <button
+          (click)="decrement()"
+          (blur)="update()"
+          class="cart-update--btn cart-update--decrement"
+        >
+          &#x2212;
+        </button>
+        <input
+          type="text"
+          [(ngModel)]="cartCount"
+          class="cart-update--inputbox"
+        />
+        <button
+          (blur)="update()"
+          (click)="increment()"
+          class="cart-update--btn cart-update--increment"
+        >
+          &#x2b;
+        </button>
+      </div>
+      <div class="cart-update-remove">
+        <button class="cart-update-remove--remove" (click)="removeBook()">remove</button>
+      </div>
+    </div>
+  </div>
+</div>

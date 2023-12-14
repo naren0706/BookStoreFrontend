@@ -1,0 +1,8 @@
+<div class="wishlist-container">
+  <div class="wishlist-title">My Wishlist</div>
+  <div class="wishlist-books">
+    <div class="book" *ngFor="let book of wishListBook">
+    <app-wishlist-book [book]="book"/>
+    </div>
+  </div>
+</div>
