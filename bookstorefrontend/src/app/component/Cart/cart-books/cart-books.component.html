@@ -4,6 +4,7 @@
       src="{{ book.book.bookImage }}"
       alt="image"
       class="cart-book-image--image"
+      (click)="ImageClick()"
     />
   </div>
   <div class="cart-book-details">
@@ -38,7 +39,9 @@
         </button>
       </div>
       <div class="cart-update-remove">
-        <button class="cart-update-remove--remove" (click)="removeBook()">remove</button>
+        <button class="cart-update-remove--remove" (click)="removeBook()">
+          remove
+        </button>
       </div>
     </div>
   </div>

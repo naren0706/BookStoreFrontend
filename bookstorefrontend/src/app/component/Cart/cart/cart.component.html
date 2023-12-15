@@ -8,7 +8,7 @@
         <div class="cartbooks-container">
           <div class="cart-book" *ngFor="let book of books">
             <!-- hi -->
-            <app-cart-books [book]="book" />
+            <app-cart-books [book]="book" (messageEvent)="bookRemoved($event)"/>
           </div>
           <div class="placeorder">
             <button class="btn btn-blue" (click)="switchPanel(addressPanel, cartPanel)">

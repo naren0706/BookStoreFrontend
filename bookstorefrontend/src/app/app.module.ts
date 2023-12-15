@@ -28,7 +28,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartBooksComponent } from './component/Cart/cart-books/cart-books.component';
 import { NewAddressComponent } from './component/Cart/new-address/new-address.component';
-import { TestComponent } from './component/test/test.component';
 import { CustomerAddressComponent } from './component/Cart/customer-address/customer-address.component';
 import { SummaryBookComponent } from './component/Cart/summary-book/summary-book.component';
 import { WishlistComponent } from './component/wishlist/wishlist/wishlist.component';
@@ -41,6 +40,7 @@ import { OldOrderBooksComponent } from './component/orders/old-order-books/old-o
 import { UserAddressesComponent } from './component/User/user-addresses/user-addresses.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { SignoutComponent } from './component/signout/signout.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -60,7 +60,6 @@ import { SignoutComponent } from './component/signout/signout.component';
     CartComponent,
     CartBooksComponent,
     NewAddressComponent,
-    TestComponent,
     CustomerAddressComponent,
     SummaryBookComponent,
     WishlistComponent,
@@ -85,6 +84,7 @@ import { SignoutComponent } from './component/signout/signout.component';
     BrowserAnimationsModule,
     MatMenuModule,
     MatSnackBarModule,
+    MatBadgeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

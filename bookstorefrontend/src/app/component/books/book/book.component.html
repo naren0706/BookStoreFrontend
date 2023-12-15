@@ -1,8 +1,6 @@
 <div class="book-container" (click)="bookClick()">
   <div class="nobook" *ngIf="!book.isAvailable">
-    <div class="nobook-sub">
-      Out Of Stock
-    </div>
+    <div class="nobook-sub">Out Of Stock</div>
   </div>
   <div class="book-container-sub">
     <div class="book-image">
@@ -17,10 +15,10 @@
       <div class="name">{{ book.bookName }}</div>
       <div class="author">{{ book.bookAuthor }}</div>
       <div class="ratings">
-        <div class="rating">{{ book.rating }}
-          <!-- &#9734; -->
+        <div class="rating">
+          {{ book.rating }}
           &#9733;
-          </div>
+        </div>
         <div class="rating-count">({{ book.bookCount }})</div>
       </div>
       <div class="prize">

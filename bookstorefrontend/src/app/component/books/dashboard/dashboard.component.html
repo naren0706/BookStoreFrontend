@@ -48,12 +48,17 @@
           mat-icon-button
           class="material-symbols-outlined icon"
           routerLink="wishlist"
+          matBadge={{wishlistCount}}
+          matBadgeColor="warn"
         >
-          Favorite</button
-        ><button
+          Favorite
+        </button>
+        <button
           mat-icon-button
           class="material-symbols-outlined icon"
           routerLink="cart"
+          matBadge={{cartCount}}
+          matBadgeColor="warn"
         >
           shopping_cart
         </button>

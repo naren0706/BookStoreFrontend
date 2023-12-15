@@ -18,10 +18,7 @@ import { AuthenticationService } from './services/AuthendicationService/authenti
 import { SignoutComponent } from './component/signout/signout.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: SignoutComponent,
-  },
+  { path: '', component: SignoutComponent },
   {
     path: 'user',
     component: UserComponent,

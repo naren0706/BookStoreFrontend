@@ -2,7 +2,7 @@
   <div class="wishlist-title">My Wishlist</div>
   <div class="wishlist-books">
     <div class="book" *ngFor="let book of wishListBook">
-    <app-wishlist-book [book]="book"/>
+    <app-wishlist-book (messageEvent)="receiveMessage($event)" [book]="book"/>
     </div>
   </div>
 </div>

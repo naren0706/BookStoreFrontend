@@ -12,6 +12,9 @@ export class WishlistComponent implements OnInit {
   ngOnInit(): void {
     this.getAllWishlist();
   }
+  receiveMessage($event: any) {
+    this.getAllWishlist();
+  }
   getAllWishlist() {
     this.WishlistService.GetAllWishList(
       localStorage.getItem('token')
